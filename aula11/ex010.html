@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <label for="vel">Velocidade:</label>
+
+    <input type="number" name="vel" id="vel" placeholder="Km/h" step="5">
+    <input type="button" value="Verificar" onclick="calcVel()"> <br>
+    <output id="res"></output>
+    <script>
+        function calcVel(){
+           if(Number(vel.value > 60)) {
+            res.innerHTML = 'Multado'
+           }else {
+            res.innerHTML = 'Não Multado'
+           }
+           
+        }
+        
+    </script>
+</body>
+</html>
